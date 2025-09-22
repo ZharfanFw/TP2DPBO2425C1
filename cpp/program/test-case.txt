@@ -1,0 +1,6 @@
+
+P001;Asus VivoBook;7500000;10;vivobook.jpg;ASUVB;Intel i5;Intel UHD;8GB;512GBSSD;42Wh;14 inci;1920x1080
+P007;Acer Nitro;5;6800000;5;aspire.jpg;ACEA5;AMD Ryzen 5;Radeon Vega 8;8GB;256GBSSD;48Wh;15.6 inci;1920x1080
+P008;Lenovo ThinkPad X200;4500000;3;thinkpad.jpg;LENX2;Intel Core 2 Duo;Intel GMA;4GB;128GBSSD;44Wh;12.1 inci;1280x800
+P009;HP Pavilion 14;8200000;8;pavilion.jpg;HPP14;Intel i7;Intel Iris Xe;16GB;512GBSSD;52Wh;14 inci;1920x1080
+P0010;Dell Inspiron 15;7800000;6;inspiron.jpg;DEL15;Intel i5;NVIDIA MX130;8GB;1TBHDD;41Wh;15.6 inci;1366x768
