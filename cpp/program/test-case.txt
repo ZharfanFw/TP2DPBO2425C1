@@ -1,6 +1,42 @@
+  ________      .__    .___      
+ /  _____/ __ __|__| __| _/____  
+/   \  ___|  |  \  |/ __ |/ __ \ 
+\    \_\  \  |  /  / /_/ \  ___/ 
+ \______  /____/|__\____ |\___  >
+        \/              \/    \/ 
 
-P001;Asus VivoBook;7500000;10;vivobook.jpg;ASUVB;Intel i5;Intel UHD;8GB;512GBSSD;42Wh;14 inci;1920x1080
-P007;Acer Nitro;5;6800000;5;aspire.jpg;ACEA5;AMD Ryzen 5;Radeon Vega 8;8GB;256GBSSD;48Wh;15.6 inci;1920x1080
-P008;Lenovo ThinkPad X200;4500000;3;thinkpad.jpg;LENX2;Intel Core 2 Duo;Intel GMA;4GB;128GBSSD;44Wh;12.1 inci;1280x800
-P009;HP Pavilion 14;8200000;8;pavilion.jpg;HPP14;Intel i7;Intel Iris Xe;16GB;512GBSSD;52Wh;14 inci;1920x1080
-P0010;Dell Inspiron 15;7800000;6;inspiron.jpg;DEL15;Intel i5;NVIDIA MX130;8GB;1TBHDD;41Wh;15.6 inci;1366x768
+TEST CASE - BERHASIL
+1. Opsi 1 (Per Field)
+P006
+Lenovo ThinkPad X200
+4500000
+3
+thinkpad.jpg
+LENX2
+Intel Core 2 Duo
+Intel GMA
+4GB
+128GBSSD
+44Wh
+12.1 inci
+1280x800
+
+2. Opsi 2 (Langung 1 Baris)
+P007;HP Pavilion 14;8200000;8;pavilion.jpg;HPP14;Intel i7;Intel Iris Xe;16GB;512GBSSD;52Wh;14 inci;1920x1080
+P008;Dell Inspiron 15;7800000;6;inspiron.jpg;DEL15;Intel i5;NVIDIA MX130;8GB;1TBHDD;41Wh;15.6 inci;1366x768
+
+TEST CASE - ERROR
+1. Error Duplikat ID
+P001;Lenovo Legion;15000000;6;legion.jpg;LenovoMB;Intel i7;RTX 2060;16GB;512GB SSD;55Wh;15.6 inci;1920x1080
+
+2. Error Duplikat Nama 
+P0010;ASUS ROG;17000000;4;asusrog2.jpg;ASUS-MB;Intel i9;RTX 3070;32GB;1TB SSD;80Wh;15.6 inci;3840x2160
+
+3. Error Harga Negatif
+P0011;Acer Predator;-15000000;5;predator.jpg;AcerMB;Intel i7;RTX 3060;16GB;1TB SSD;70Wh;15.6 inci;1920x1080
+
+4. Error Stok Negatif
+P012;MSI Stealth;20000000;-3;msistealth.jpg;MSI-MB;Intel i7;RTX 3070;16GB;1TB SSD;70Wh;15.6 inci;1920x1080
+
+5. Error Ada Field Kosong
+P013;;18000000;5;msi.jpg;MSI-MB;Intel i7;RTX 3060;16GB;1TB SSD;70Wh;15.6 inci;1920x1080

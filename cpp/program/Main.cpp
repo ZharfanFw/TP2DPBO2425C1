@@ -3,23 +3,18 @@
 
 using namespace std;
 
-// Hitung lebar kolom berdasarkan data terpanjang
+// =================== Fungsi Utility ===================
+
+// Hitung lebar kolom tabel berdasarkan panjang data terpanjang tiap field
 vector<size_t> hitungLebarKolom(vector<Laptop>& data) {
+    // Inisialisasi lebar awal berdasarkan header
     vector<size_t> lebar = {
-        string("ID Produk").size(),
-        string("Nama Produk").size(),
-        string("Harga").size(),
-        string("Stok").size(),
-        string("Motherboard").size(),
-        string("CPU").size(),
-        string("GPU").size(),
-        string("RAM").size(),
-        string("Storage").size(),
-        string("Baterai").size(),
-        string("Ukuran Layar").size(),
-        string("Resolusi").size()
+        string("ID Produk").size(), string("Nama Produk").size(), string("Harga").size(), string("Stok").size(),
+        string("Motherboard").size(), string("CPU").size(), string("GPU").size(), string("RAM").size(),
+        string("Storage").size(), string("Baterai").size(), string("Ukuran Layar").size(), string("Resolusi").size()
     };
 
+    // Update lebar berdasarkan data setiap laptop
     for (auto& item : data) {
         lebar[0] = max(lebar[0], item.getIdProduk().size());
         lebar[1] = max(lebar[1], item.getNamaProduk().size());
@@ -34,42 +29,36 @@ vector<size_t> hitungLebarKolom(vector<Laptop>& data) {
         lebar[10] = max(lebar[10], item.getUkuranLayar().size());
         lebar[11] = max(lebar[11], item.getResolusiLayar().size());
     }
-    return lebar;
+    return lebar; // kembalikan vektor lebar tiap kolom
 }
 
-// Cetak garis pemisah tabel
+// Cetak garis horizontal tabel
 void cetakGaris(vector<size_t>& lebar) {
     cout << "+";
-    for (auto& w : lebar) {
+    for (auto& w : lebar)
         cout << string(w + 2, '-') << "+";
-    }
     cout << "\n";
 }
 
-// Cetak tabel
+// Tampilkan data laptop dalam bentuk tabel rapi
 void tampilkanTabel(vector<Laptop>& data) {
-    if (data.empty()) {
+    if (data.empty()) { // cek jika data kosong
         cout << "Data kosong.\n";
         return;
     }
 
-    vector<size_t> lebar = hitungLebarKolom(data);
+    vector<size_t> lebar = hitungLebarKolom(data); // hitung lebar tiap kolom
+    vector<string> header = {"ID Produk", "Nama Produk", "Harga", "Stok", "Motherboard",
+                             "CPU", "GPU", "RAM", "Storage", "Baterai", "Ukuran Layar", "Resolusi"};
 
-    vector<string> header = {
-        "ID Produk", "Nama Produk", "Harga", "Stok",
-        "Motherboard", "CPU", "GPU", "RAM", "Storage",
-        "Baterai", "Ukuran Layar", "Resolusi"
-    };
-
-    cetakGaris(lebar);
+    cetakGaris(lebar); // garis atas
     cout << "|";
-    for (size_t i = 0; i < header.size(); i++) {
-        cout << " " << left << setw(lebar[i]) << header[i] << " |";
-    }
+    for (size_t i = 0; i < header.size(); i++)
+        cout << " " << left << setw(lebar[i]) << header[i] << " |"; // cetak header
     cout << "\n";
-    cetakGaris(lebar);
+    cetakGaris(lebar); // garis pemisah header
 
-    for (auto& item : data) {
+    for (auto& item : data) { // cetak setiap row laptop
         cout << "| " << setw(lebar[0]) << left << item.getIdProduk() << " |";
         cout << " " << setw(lebar[1]) << item.getNamaProduk() << " |";
         cout << " " << setw(lebar[2]) << item.getHargaProduk() << " |";
@@ -84,11 +73,12 @@ void tampilkanTabel(vector<Laptop>& data) {
         cout << " " << setw(lebar[11]) << item.getResolusiLayar() << " |";
         cout << "\n";
     }
-
-    cetakGaris(lebar);
+    cetakGaris(lebar); // garis bawah tabel
 }
 
-// Fungsi input laptop
+// =================== Fungsi Input & Validasi ===================
+
+// Fungsi input laptop baru
 Laptop inputLaptop() {
     Laptop l;
     string temp;
@@ -97,11 +87,9 @@ Laptop inputLaptop() {
     cout << "1. Input satu per satu" << endl;
     cout << "2. Input langsung semua field (dipisah ';')" << endl;
     cout << "Pilihan: ";
-    int opsi;
-    cin >> opsi;
-    cin.ignore();
+    int opsi; cin >> opsi; cin.ignore();
 
-    if (opsi == 1) {
+    if (opsi == 1) { // input manual per field
         cout << "Masukkan ID Produk: "; getline(cin, temp); l.setIdProduk(temp);
         cout << "Masukkan Nama Produk: "; getline(cin, temp); l.setNamaProduk(temp);
         cout << "Masukkan Harga: "; getline(cin, temp); l.setHargaProduk(stoi(temp));
@@ -115,18 +103,19 @@ Laptop inputLaptop() {
         cout << "Masukkan Baterai: "; getline(cin, temp); l.setBaterai(temp);
         cout << "Masukkan Ukuran Layar: "; getline(cin, temp); l.setUkuranLayar(temp);
         cout << "Masukkan Resolusi Layar: "; getline(cin, temp); l.setResolusiLayar(temp);
-    } else if (opsi == 2) {
+    } else if (opsi == 2) { // input baris langsung
         cout << "Masukkan data (dipisah ';'):\n";
-        cout << "IDProduk;NamaProduk;Harga;Stok;Foto;Motherboard;CPU;GPU;RAM;Storage;Baterai;UkuranLayar;Resolusi\n";
         string line; getline(cin, line);
         stringstream ss(line);
-
         string id, nama, foto, mb, cpu, gpu, ram, storage, bat, ukuran, res, hargaStr, stokStr;
+
+        // Pisahkan field dengan delimiter ';'
         getline(ss, id, ';'); getline(ss, nama, ';'); getline(ss, hargaStr, ';'); getline(ss, stokStr, ';');
         getline(ss, foto, ';'); getline(ss, mb, ';'); getline(ss, cpu, ';'); getline(ss, gpu, ';');
         getline(ss, ram, ';'); getline(ss, storage, ';'); getline(ss, bat, ';'); getline(ss, ukuran, ';');
         getline(ss, res, ';');
 
+        // Set field ke object laptop
         l.setIdProduk(id); l.setNamaProduk(nama);
         l.setHargaProduk(stoi(hargaStr)); l.setStokProduk(stoi(stokStr));
         l.setFotoProduk(foto); l.setMotherboard(mb); l.setCpu(cpu); l.setGpu(gpu);
@@ -137,7 +126,7 @@ Laptop inputLaptop() {
     return l;
 }
 
-// Validasi field kosong
+// Cek jika ada field kosong
 bool adaFieldKosong(Laptop& l) {
     return l.getIdProduk().empty() || l.getNamaProduk().empty() || l.getFotoProduk().empty() ||
            l.getMotherboard().empty() || l.getCpu().empty() || l.getGpu().empty() ||
@@ -147,18 +136,18 @@ bool adaFieldKosong(Laptop& l) {
 
 // Validasi harga/stok negatif
 bool validasiHargaStok(Laptop& l) {
-    if (l.getHargaProduk() < 0) {
-        cout << "❌ Error: Harga tidak boleh negatif!\n";
-        return false;
+    if (l.getHargaProduk() < 0) { 
+        cout << "❌ Error: Harga tidak boleh negatif!\n"; 
+        return false; 
     }
-    if (l.getStokProduk() < 0) {
-        cout << "❌ Error: Stok tidak boleh negatif!\n";
-        return false;
+    if (l.getStokProduk() < 0) { 
+        cout << "❌ Error: Stok tidak boleh negatif!\n"; 
+        return false; 
     }
     return true;
 }
 
-// Validasi duplikat
+// Cek duplikat ID/Nama
 bool cekDuplikat(vector<Laptop>& data, string id, string nama) {
     for (auto& item : data) {
         if (item.getIdProduk() == id) {
@@ -173,10 +162,12 @@ bool cekDuplikat(vector<Laptop>& data, string id, string nama) {
     return false;
 }
 
-int main() {
-    vector<Laptop> daftarLaptop;
+// =================== Fungsi Main ===================
 
-    // Data dummy
+int main() {
+    vector<Laptop> daftarLaptop; // simpan semua data laptop
+
+    // ===== Data dummy awal =====
     Laptop l1; l1.setIdProduk("P001"); l1.setNamaProduk("ASUS ROG"); l1.setHargaProduk(20000000); l1.setStokProduk(10);
     l1.setFotoProduk("rog.jpg"); l1.setMotherboard("ROG STRIX"); l1.setCpu("Intel i7"); l1.setGpu("RTX 3060");
     l1.setRam("16GB"); l1.setStorage("1TB SSD"); l1.setBaterai("80Wh"); l1.setUkuranLayar("15.6 inci"); l1.setResolusiLayar("1920x1080");
@@ -199,30 +190,31 @@ int main() {
 
     daftarLaptop = {l1, l2, l3, l4, l5};
 
-    // Tampilkan tabel awal
-    tampilkanTabel(daftarLaptop);
+    tampilkanTabel(daftarLaptop); // tampilkan tabel awal
 
+    // Loop untuk input tambahan user
     char lanjut;
     do {
         cout << "\nApakah ingin menambah data laptop baru? (y/n): ";
-        cin >> lanjut;
-        cin.ignore();
+        cin >> lanjut; cin.ignore();
         if (lanjut == 'y' || lanjut == 'Y') {
-            Laptop baru = inputLaptop();
+            Laptop baru = inputLaptop(); // input laptop baru
+
+            // Urutan validasi: duplikat → harga/stok negatif → field kosong
             if (cekDuplikat(daftarLaptop, baru.getIdProduk(), baru.getNamaProduk())) {
-                // duplikat → ditolak
+                // data ditolak jika duplikat
             } else if (!validasiHargaStok(baru)) {
-                // harga/stok negatif → ditolak
+                // data ditolak jika harga/stok negatif
             } else if (adaFieldKosong(baru)) {
                 cout << "❌ Error: Ada field yang kosong, data ditolak!\n";
             } else {
-                daftarLaptop.push_back(baru);
+                daftarLaptop.push_back(baru); // tambahkan jika lolos semua validasi
                 cout << "✅ Data berhasil ditambahkan!\n";
             }
-            tampilkanTabel(daftarLaptop);
+            tampilkanTabel(daftarLaptop); // tampilkan tabel terbaru
         }
     } while (lanjut == 'y' || lanjut == 'Y');
 
-    return 0;
+    return 0; // program selesai
 }
 
