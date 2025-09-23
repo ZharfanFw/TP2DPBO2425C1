@@ -2,8 +2,8 @@
 
 Repositori ini berisi implementasi program berbasis Object-Oriented Programming (OOP) untuk Tugas Praktikum 2 mata kuliah Desain dan Pemrograman Berorientasi Objek.
 
-**Janji**
-> Saya Zharfan Faza Wibawa dengan NIM 2403995 mengerjakan Tugas Praktikum 2 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
+## Janji
+Saya Zharfan Faza Wibawa dengan NIM 2403995 mengerjakan Tugas Praktikum 2 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 ## 🚀 Deskripsi Proyek
 
