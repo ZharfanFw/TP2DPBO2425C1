@@ -18,3 +18,4 @@ Implementasi program tersedia dalam empat bahasa pemrograman yang berbeda:
 ## 🏛️ Desain & Struktur Kelas
 
 Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
+![Diagram](diagram.png)
