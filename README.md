@@ -18,4 +18,6 @@ Implementasi program tersedia dalam empat bahasa pemrograman yang berbeda:
 ## 🏛️ Desain & Struktur Kelas
 
 Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
-<img src="diagram.png" alt="Design Inheritance" width="500">
+<br>
+<img src="diagram.png" alt="Design Inheritance" height="500">
+<br>
