@@ -42,3 +42,12 @@ Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
 - `resolusi_layar` (string): Resolusi layar laptop
 
 ## Alur Program
+1.  **Inisialisasi Data Awal**: Saat program pertama kali berjalan, ia akan secara otomatis memuat serangkaian data **Laptop** yang telah ditentukan sebelumnya sebagai contoh awal.
+2.  **Tampilan Pertama**: Data awal tersebut akan segera ditampilkan kepada pengguna dalam format tabel yang rapi dan terstruktur.
+3.  **Interaksi Pengguna**: Program kemudian akan memberikan opsi kepada pengguna untuk menambahkan data elektronik baru.
+4.  **Proses Input & Validasi**: Jika pengguna memilih untuk menambah data, program akan meminta input. Setiap data yang dimasukkan akan divalidasi untuk memastikan kelengkapan dan keunikannya (misalnya, ID tidak boleh sama).
+5.  **Pembaruan Daftar**: Data baru yang berhasil lolos validasi akan disimpan, dan program akan menampilkan kembali seluruh isi daftar dalam tabel yang sudah diperbarui secara dinamis.
+6.  **Pengulangan**: Proses dari langkah 3 hingga 5 akan terus berulang, memungkinkan pengguna untuk menambahkan data secara berkelanjutan.
+7.  **Terminasi**: Program akan berakhir ketika pengguna memutuskan untuk tidak lagi menambahkan data.
+
+## Dokumentasi
