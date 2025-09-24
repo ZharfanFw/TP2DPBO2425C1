@@ -69,7 +69,7 @@ Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
 **PHP**
 <br>
 <img src="php/screenshot/php1.png" alt="Dokumentasi PHP" height="500">
-<br
+<br>
 <br>
 <img src="php/screenshot/php2.png" alt="Dokumentasi PHP" height="500">
 <br>
