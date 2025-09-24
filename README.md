@@ -50,4 +50,23 @@ Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
 6.  **Pengulangan**: Proses dari langkah 3 hingga 5 akan terus berulang, memungkinkan pengguna untuk menambahkan data secara berkelanjutan.
 7.  **Terminasi**: Program akan berakhir ketika pengguna memutuskan untuk tidak lagi menambahkan data.
 
-## Dokumentasi
+## 📷 Dokumentasi
+1. **CPP**
+<br>
+<img src="cpp/screenshot/cpp.png" alt="Dokumentasi CPP" height="500">
+<br
+   
+2. **Java**
+<br>
+<img src="java/screenshot/java.png" alt="Dokumentasi Java" height="500">
+<br
+
+3. **Python**
+<br>
+<img src="python/screenshot/python.png" alt="Dokumentasi Python" height="500">
+<br
+
+4. **PHP**
+<br>
+<img src="php/screenshot/php2.png" alt="Dokumentasi PHP" height="500">
+<br
