@@ -51,22 +51,22 @@ Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
 7.  **Terminasi**: Program akan berakhir ketika pengguna memutuskan untuk tidak lagi menambahkan data.
 
 ## 📷 Dokumentasi
-- **CPP**
+**CPP**
 <br>
 <img src="cpp/screenshot/cpp.png" alt="Dokumentasi CPP" height="500">
 <br
 
-- **Java**
+**Java**
 <br>
 <img src="java/screenshot/java.png" alt="Dokumentasi Java" height="500">
 <br
 
-- **Python**
+**Python**
 <br>
 <img src="python/screenshot/python.png" alt="Dokumentasi Python" height="500">
 <br
 
-- **PHP**
+**PHP**
 <br>
 <img src="php/screenshot/php1.png" alt="Dokumentasi PHP" height="500">
 <br
