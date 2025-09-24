@@ -41,7 +41,7 @@ Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
 - `ukuran_layar` (string): Ukuran layar laptop
 - `resolusi_layar` (string): Resolusi layar laptop
 
-## Alur Program
+## 🖥️ Alur Program
 1.  **Inisialisasi Data Awal**: Saat program pertama kali berjalan, ia akan secara otomatis memuat serangkaian data **Laptop** yang telah ditentukan sebelumnya sebagai contoh awal.
 2.  **Tampilan Pertama**: Data awal tersebut akan segera ditampilkan kepada pengguna dalam format tabel yang rapi dan terstruktur.
 3.  **Interaksi Pengguna**: Program kemudian akan memberikan opsi kepada pengguna untuk menambahkan data elektronik baru.
@@ -51,22 +51,25 @@ Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
 7.  **Terminasi**: Program akan berakhir ketika pengguna memutuskan untuk tidak lagi menambahkan data.
 
 ## 📷 Dokumentasi
-1. **CPP**
+- **CPP**
 <br>
 <img src="cpp/screenshot/cpp.png" alt="Dokumentasi CPP" height="500">
 <br
-   
-2. **Java**
+
+- **Java**
 <br>
 <img src="java/screenshot/java.png" alt="Dokumentasi Java" height="500">
 <br
 
-3. **Python**
+- **Python**
 <br>
 <img src="python/screenshot/python.png" alt="Dokumentasi Python" height="500">
 <br
 
-4. **PHP**
+- **PHP**
+<br>
+<img src="php/screenshot/php1.png" alt="Dokumentasi PHP" height="500">
+<br
 <br>
 <img src="php/screenshot/php2.png" alt="Dokumentasi PHP" height="500">
 <br
