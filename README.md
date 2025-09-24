@@ -54,17 +54,17 @@ Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
 **CPP**
 <br>
 <img src="cpp/screenshot/cpp.png" alt="Dokumentasi CPP" height="500">
-<br
+<br>
 
 **Java**
 <br>
 <img src="java/screenshot/java.png" alt="Dokumentasi Java" height="500">
-<br
+<br>
 
 **Python**
 <br>
 <img src="python/screenshot/python.png" alt="Dokumentasi Python" height="500">
-<br
+<br>
 
 **PHP**
 <br>
@@ -72,4 +72,4 @@ Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
 <br
 <br>
 <img src="php/screenshot/php2.png" alt="Dokumentasi PHP" height="500">
-<br
+<br>
