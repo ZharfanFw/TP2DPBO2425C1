@@ -21,3 +21,24 @@ Struktur pewarisan kelas yang digunakan adalah sebagai berikut:
 <br>
 <img src="diagram.png" alt="Design Inheritance" height="500">
 <br>
+
+### **1. Elektronik (Base Class)**
+- `id` (string): ID produk
+- `nama_produk` (string): Nama produk
+- `harga_produk` (int): Harga produk
+- `stok_produk` (int): Jumlah stok produk
+- `foto_produk` (string): URL gambar produk
+
+### **2. Komputer (Child of Elektronik)**
+- `motherboard` (string): motherboard
+- `cpu` (string): cpu
+- `gpu` (string): gpu
+- `ram` (string): ram
+- `storage` (string): storage
+
+### **3. Laptop (Child of Komputer)**
+- `baterai` (string): Baterai
+- `ukuran_layar` (string): Ukuran layar laptop
+- `resolusi_layar` (string): Resolusi layar laptop
+
+## Alur Program
